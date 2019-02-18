@@ -1,0 +1,37 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="include/dome.css" />
+  <script src="include/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+ 
+  <!-- grid -->
+  <div id="domegrid_container" class="containers">
+    <div id="domegrid"></div>
+  </div>
+
+  <!-- list -->
+  <div id="domelist_container" class="containers">
+    <div id="domelist"></div>
+  </div>
+
+  <audio id="audio_playback"/>
+  <script src="include/dome.js"></script>
+  <script src="include/dome-audio.js"></script>
+  <script src="include/dome-ux.js"></script>
+  <script src="include/export-audio.js"></script>
+  <script src="include/dome-grid.js"></script>
+  <script src="include/dome-tricks.js"></script>
+
+  <!-- load ( when opening as a local html file without running apache, we cannot load json files with XMLhttprequest, thus we use this method instead ) -->
+  <script src="drumcorps_ourtreasure/data.json.js"></script>
+  <script>
+    // CONFIG
+    var dataset = "drumcorps_ourtreasure"
+    // Initialize
+    window.onload = domeload_directory(dataset)
+  </script>
+
+</body>
+</html>
+
