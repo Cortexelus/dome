@@ -90,7 +90,12 @@ window.addEventListener("keyup", function(e){
   }else if(e.key == "c"){
     // give me the cluster this belongs in
     cluster_jump();
+  }else if(e.keyCode == 8){
+    // backspace/delete
+    // pause or unpause the audio
+    pause_unpause();
   }
+  //console.log(e.keyCode)
 
 
 });

@@ -76,6 +76,18 @@ function seek(time){
 
 }
 
+// if audio is paused, unpause it, if it is unpausead, pause it
+function pause_unpause(){
+  if(_audio_has_begun && audio_player.src){ // make sure audio is loaded
+    if(!audio_player.paused){
+      audio_player.pause(); // pause if it's playing
+    }else{
+      audio_player.play(); // play if it's paused
+    }
+    update_cursor();
+  }
+}
+
 // Shuffle jQuery array of elements - see Fisher-Yates algorithm
 jQuery.fn.shuffle = function () {
     var j;
